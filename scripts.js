@@ -18,7 +18,32 @@ $(document).ready(function(){
     
     	return arr[(val%16)];
    	}
-
+   	
+   	function getD(){
+	   	var d = new Date();
+	   	var month = d.getMonth();
+	   	var day = d.getDate();
+	   	var year = d.getFullYear();
+	   	var mins = d.getMinutes();
+	   	var hours = d.getHours();
+	   	
+	   	var time = "AM";
+	   	
+	   	
+	   	if (hours > 12){
+		   	hours -= 12;
+		   	time = "PM";
+	   	}
+	   	
+	   	
+	   	var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+	   	
+	   	
+	   	
+	   	var str = months[month]+ " " + day +", " + year +"\n" + hours + ":" + mins + " " + time;
+	   	console.log(day);
+	   	return str;
+   	}
 	
 	if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
@@ -38,9 +63,10 @@ $(document).ready(function(){
 	        currentWeather = data;
             temp = Math.round(data.main.temp); 
             $("#weather").html(
-	          "<h1>"+ getDate() + "</h1><br>"+
-              "<h2>"+ data.name + "'s Current Weather</h2>"+
-              "<br><img src=\"http://openweathermap.org/img/w/"+ data.weather[0].icon+".png\" width=75px height = 75px>"+
+	          
+              "<h1>"+ data.name + "'s Current Weather</h1>"+
+              "<p>"+ getD() + "</p>"+
+              "<img src=\"http://openweathermap.org/img/w/"+ data.weather[0].icon+".png\" width=75px height = 75px>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
               "<p>" + capital(data.weather[0].description) + "</p>"
              );
