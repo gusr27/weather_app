@@ -63,13 +63,13 @@ $(document).ready(function(){
            success: function(data){
 	         
 	        currentWeather = data;
-            temp = Math.round(data.temp); 
+            temp = Math.round(data.currently.apparentTemperature); 
             $("#weather").html(
 	          
               "<h1>"+ data.name + "'s Current Weather</h1>"+
               "<p>"+ getD() + "</p>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
-              "<p>" + capital(data.minutely.summary) + "</p>"
+              "<p>" + capital(data.currently.summary) + "</p>"
              );
            }//end of success
            
@@ -106,8 +106,8 @@ $(document).ready(function(){
         
      $("#moreInfo").on("click",function(){
 	    $("#infoWell").html(
-		  "<p>Wind speed: " + currentWeather.wind.speed +" MPH @ "+ degToCompass(currentWeather.wind.deg)+"</p><br>"+
-		  "<p>Humidity: " + currentWeather.main.humidity +"%</p>"
+		  "<p>Wind speed: " + currentWeather.currently.windSpeed +" MPH @ "+ degToCompass(currentWeather.currently.windBearing)+"</p><br>"+
+		  "<p>Humidity: " + currentWeather.currently.humidity +"%</p>"
 		    
 	    );
      });
