@@ -50,7 +50,7 @@ $(document).ready(function(){
       
           var lat = position.coords.latitude;
           var lon = position.coords.longitude;
-          var weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" +lat+"&lon="+lon+"&units=imperial&appid=043ff0831cbf7ed5ae7d238a7e334506";
+          var weatherURL = https:"https://api.darksky.net/forecast/5f3df52525bf4b8c60bd5460e7d2da19/" +lat+","+lon;
       
           
            $.ajax({
