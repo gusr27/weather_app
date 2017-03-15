@@ -59,7 +59,7 @@ $(document).ready(function(){
            
            url: weatherURL,
            type: 'GET',
-           format: 'json',
+           dataType: 'jsonp',
            success: function(data){
 	         
 	        currentWeather = data;
