@@ -52,7 +52,7 @@ $(document).ready(function(){
           var lon = position.coords.longitude;
           var key = "5f3df52525bf4b8c60bd5460e7d2da19";
 
-          var weatherURL = "https://api.darksky.net/forecast/5f3df52525bf4b8c60bd5460e7d2da19/" +key+ "/"+ lat+","+lon;
+          var weatherURL = "https://api.darksky.net/forecast/5f3df52525bf4b8c60bd5460e7d2da19/"+ lat+","+lon;
       
           
            $.ajax({
