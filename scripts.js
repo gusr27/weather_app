@@ -41,7 +41,7 @@ $(document).ready(function(){
 	   	
 	   	
 	   	var str = months[month]+ " " + day +", " + year +"\n" + hours + ":" + mins + " " + time;
-	   	console.log(day);
+	  
 	   	return str;
    	}
 	
@@ -64,6 +64,8 @@ $(document).ready(function(){
 	         
 	        currentWeather = data;
             temp = Math.round(data.currently.apparentTemperature); 
+            
+            console.log(temp);
             $("#weather").html(
 	          
               "<h1>"+ data.name + "'s Current Weather</h1>"+
