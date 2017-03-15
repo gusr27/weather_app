@@ -38,7 +38,8 @@ $(document).ready(function(){
 	        currentWeather = data;
             temp = Math.round(data.main.temp); 
             $("#weather").html(
-              "<h1>"+ data.name + "'s Current Weather</h1>"+
+	          "<h1>"+ getDate() + "</h1><br>"+
+              "<h2>"+ data.name + "'s Current Weather</h2>"+
               "<br><img src=\"http://openweathermap.org/img/w/"+ data.weather[0].icon+".png\" width=75px height = 75px>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
               "<p>" + capital(data.weather[0].description) + "</p>"
