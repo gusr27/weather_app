@@ -68,7 +68,6 @@ $(document).ready(function(){
 	          
               "<h1>"+ data.name + "'s Current Weather</h1>"+
               "<p>"+ getD() + "</p>"+
-              "<img src=\"http://openweathermap.org/img/w/"+ data.weather[0].icon+".png\" width=75px height = 75px>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
               "<p>" + capital(data.minutely.summary) + "</p>"
              );
