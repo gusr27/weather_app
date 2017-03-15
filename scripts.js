@@ -65,7 +65,7 @@ $(document).ready(function(){
 	        currentWeather = data;
             temp = Math.round(data.currently.apparentTemperature); 
             
-            console.log(temp);
+            console.log(temp + "is the temperature");
             $("#weather").html(
 	          
               "<h1>"+ data.name + "'s Current Weather</h1>"+
