@@ -37,5 +37,6 @@ body{
 }
 
 p a{
-	text-decoration: none;
+	text-decoration: none !important;
+	color: white!important;
 }
