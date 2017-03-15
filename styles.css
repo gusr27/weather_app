@@ -35,3 +35,7 @@ body{
 	color: white;
 	border: 1px solid #02547C !important;
 }
+
+p a{
+	text-decoration: none;
+}
