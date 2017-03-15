@@ -50,7 +50,7 @@ $(document).ready(function(){
       
           var lat = position.coords.latitude;
           var lon = position.coords.longitude;
-          var weatherURL = https:"https://api.darksky.net/forecast/5f3df52525bf4b8c60bd5460e7d2da19/" +lat+","+lon;
+          var weatherURL = "https://api.darksky.net/forecast/5f3df52525bf4b8c60bd5460e7d2da19/" +lat+","+lon;
       
           
            $.ajax({
@@ -61,14 +61,14 @@ $(document).ready(function(){
            success: function(data){
 	         
 	        currentWeather = data;
-            temp = Math.round(data.main.temp); 
+            temp = Math.round(data.temp); 
             $("#weather").html(
 	          
               "<h1>"+ data.name + "'s Current Weather</h1>"+
               "<p>"+ getD() + "</p>"+
               "<img src=\"http://openweathermap.org/img/w/"+ data.weather[0].icon+".png\" width=75px height = 75px>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
-              "<p>" + capital(data.weather[0].description) + "</p>"
+              "<p>" + capital(data.minutely.summary) + "</p>"
              );
            }//end of success
            
