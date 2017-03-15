@@ -40,3 +40,8 @@ p a{
 	text-decoration: none !important;
 	color: white!important;
 }
+
+p a:hover{
+	font-weight: 800 !important;
+	color: black !important;
+}
