@@ -68,7 +68,7 @@ $(document).ready(function(){
             console.log(temp + "is the temperature");
             $("#weather").html(
 	          
-              "<h1>"+ data.name + "'s Current Weather</h1>"+
+              "<h1>Your Current Weather</h1>"+
               "<p>"+ getD() + "</p>"+
               " <p id=\"temper\">" + temp+"&deg; F</p>"+
               "<p>" + capital(data.currently.summary) + "</p>"
@@ -109,7 +109,7 @@ $(document).ready(function(){
      $("#moreInfo").on("click",function(){
 	    $("#infoWell").html(
 		  "<p>Wind speed: " + currentWeather.currently.windSpeed +" MPH @ "+ degToCompass(currentWeather.currently.windBearing)+"</p><br>"+
-		  "<p>Humidity: " + currentWeather.currently.humidity +"%</p>"
+		  "<p>Humidity: " + ((currentWeather.currently.humidity)*100) +"%</p>"
 		    
 	    );
      });
